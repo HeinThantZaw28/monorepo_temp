@@ -7,7 +7,7 @@ Minimal monorepo using pnpm workspaces with a Next.js web app, a NestJS API, and
 - TypeScript
 - Next.js 16.1.6 + React 19.2.4 — `apps/web`
 - NestJS — `apps/api`
-- Swagger (OpenAPI) — `/docs`
+- Swagger (OpenAPI) — `/swagger`
 - Shared package — `packages/shared`
 
 ## Structure
@@ -54,7 +54,7 @@ pnpm build
 - Web: http://localhost:3000
 - API: http://localhost:3001
 - API Health: http://localhost:3001/health
-- Swagger UI: http://localhost:3001/docs
+- Swagger UI: http://localhost:3001/swagger
 
 ## Shared Package
 The shared package is published in-workspace as `@app/shared` and can be imported from both apps:
