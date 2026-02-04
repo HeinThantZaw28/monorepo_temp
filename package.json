@@ -1,0 +1,14 @@
+{
+  "name": "my-monorepo",
+  "private": true,
+  "packageManager": "pnpm@9.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter @app/web dev",
+    "dev:api": "pnpm --filter @app/api dev",
+    "dev": "concurrently -k -n web,api -c blue,green \"pnpm dev:web\" \"pnpm dev:api\"",
+    "build": "pnpm --filter @app/shared build && pnpm --filter @app/api build && pnpm --filter @app/web build"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
